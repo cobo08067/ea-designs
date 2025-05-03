@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@500;600&family=Open+Sans&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.ea_designs {
+    max-height: 70px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header {
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; /* Push nav to right */
+    flex-wrap: nowrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0;
+}
+
+nav a:hover {
+    color: #38a1db;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #38a1db;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(56, 161, 219, 0.8), rgba(56, 161, 219, 0.9)), 
+                url('workshop-bg.jpg') center/cover;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* About Content Sections */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.history-section, .philosophy-section, .workshop-section {
+    margin-bottom: 4rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.history-text {
+    background: rgba(255,255,255,0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.first_about_image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.philosophy-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-5px);
+}
+
+.philosophy-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.workshop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.workshop-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #f5f9fc;
+}
+
+.cta-button {
+    background-color: #38a1db;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2d87b5;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a3d54;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .history-grid,
+    .workshop-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .workshop-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .ea_designs {
+        max-height: 50px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .header {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header {
+        text-align: center;
+    }
+    
+    nav {
+        justify-content: center;
+    }
+}
+
+/* Custom Furniture Page Styles */
+.cabinetry-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-subtitle {
+    text-align: center;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a3d54;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Project Gallery Styles */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-image-container {
+    height: 400px;
+    overflow: hidden;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+.project-item h2 {
+    font-size: 1.25rem;
+    padding: 1rem 1rem 0;
+    color: #1a3d54;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.project-item p {
+    padding: 0 1rem 1rem;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Cabinetry Page Specific Styles */
+.cabinetry-page .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.cabinet-project-images {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    aspect-ratio: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    height: 500px;
+}
+
+.cabinet-project-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.cabinet-project-images:has(img:only-child) {
+    display: block;
+    grid-template-columns: 1fr;
+}
+
+/* Project Showcase Styles */
+.project-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* About Page Image Styles */
+.about-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.history-grid,
+.workshop-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Image Containers */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Specific Image Heights */
+.first_about_image {
+    height: 500px;
+    object-fit: cover;
+}
+
+.whole_workshop {
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .first_about_image {
+        height: 400px;
+    }
+    
+    .whole_workshop {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-grid,
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .first_about_image {
+        height: 350px;
+    }
+
+    .whole_workshop {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .first_about_image {
+        height: 250px;
+    }
+
+    .whole_workshop {
+        height: 300px;
+    }
+}
+
+.contact-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f5f9fc;
+}
+.cabinet-project-image-container {
+    height: 500px;
+    overflow: hidden;
+}
+.cabinet-project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.cabinet-project-image-container img:hover {
+    transform: scale(1.05);
+}
+.cabinet-project-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}

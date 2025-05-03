@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact EA Designs</title>
+    <link rel="stylesheet" href="tester.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img class="ea_designs" src="images/ea logo.png" alt="EA Designs Logo">
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about_us_test.html">About Us</a>
+                <a href="contact_page.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <h1>Start Your Woodworking Project</h1>
+        <p>Fill out the form below or call us at (972) 977-3207</p>
+        
+        <form id="contactForm" action="https://formsubmit.co/eack81@yahoo.com" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="projectType">Project Type:</label>
+                <select id="projectType" name="projectType">
+                    <option value="furniture">Custom Furniture</option>
+                    <option value="renovation">Cabinentry</option>
++                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Project Details:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="budget">Estimated Budget:</label>
+                <input type="text" id="budget" name="budget">
+            </div>
+            
+            <input type="hidden" name="_subject" value="New Project Inquiry from EA Designs Website">
+            <input type="hidden" name="_autoresponse" value="Thank you for your inquiry!">
+            
+            <button type="submit" class="cta-button">Send Inquiry</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 EA Designs | Handcrafted Woodwork | All Rights Reserved
+    </footer>
+
+</body>
+</html>
